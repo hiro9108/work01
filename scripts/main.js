@@ -6,38 +6,50 @@ const frontEndSkills = document.getElementById("frontEndSkills");
 const backEndSkills = document.getElementById("backEndSkills");
 const databaseSkills = document.getElementById("databaseSkills");
 
+const selectSkills = [
+  selectFrontSkills,
+  selectBackSkills,
+  selectDatabaseSkills,
+];
+
+const skills = [frontEndSkills, backEndSkills, databaseSkills];
+
+// For show slill
+const showSkill = (targetSkill) => {
+  skills.forEach((el) => {
+    if (el === targetSkill) {
+      el.classList.replace("close", "open");
+    } else {
+      el.classList.replace("open", "close");
+    }
+  });
+};
+
+// For Focus color (Todo: Merge the same function in header to global)
+const focusColor = (targetText) => {
+  selectSkills.forEach((el) => {
+    if (el === targetText) {
+      el.classList.add("focus");
+    } else {
+      el.classList.remove("focus");
+    }
+  });
+};
+
 // Click front-end
 selectFrontSkills.addEventListener("click", () => {
-  frontEndSkills.classList.replace("close", "open");
-  backEndSkills.classList.replace("open", "close");
-  databaseSkills.classList.replace("open", "close");
-
-  // Focus color
-  selectFrontSkills.classList.add("focus");
-  selectBackSkills.classList.remove("focus");
-  selectDatabaseSkills.classList.remove("focus");
+  showSkill(frontEndSkills);
+  focusColor(selectFrontSkills);
 });
 
 // Click back-end
 selectBackSkills.addEventListener("click", () => {
-  frontEndSkills.classList.replace("open", "close");
-  backEndSkills.classList.replace("close", "open");
-  databaseSkills.classList.replace("open", "close");
-
-  // Focus color
-  selectFrontSkills.classList.remove("focus");
-  selectBackSkills.classList.add("focus");
-  selectDatabaseSkills.classList.remove("focus");
+  showSkill(backEndSkills);
+  focusColor(selectBackSkills);
 });
 
 // Click database
 selectDatabaseSkills.addEventListener("click", () => {
-  frontEndSkills.classList.replace("open", "close");
-  backEndSkills.classList.replace("open", "close");
-  databaseSkills.classList.replace("close", "open");
-
-  // Focus color
-  selectFrontSkills.classList.remove("focus");
-  selectBackSkills.classList.remove("focus");
-  selectDatabaseSkills.classList.add("focus");
+  showSkill(databaseSkills);
+  focusColor(selectDatabaseSkills);
 });

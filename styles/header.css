@@ -5,16 +5,13 @@
   background-image: url(https://cdn.pixabay.com/photo/2019/12/11/01/51/skating-4687221__480.png);
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 
 .header .backScreen {
   height: inherit;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.788);
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   z-index: 1;
 }
 

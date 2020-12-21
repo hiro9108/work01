@@ -1,6 +1,12 @@
 /* Main css */
 
 .main {
+  /* width: 90vw;
+  margin: 0 auto; */
+}
+
+.sectionWorks,
+.sectionSkills {
   width: 90vw;
   margin: 0 auto;
 }
@@ -33,7 +39,7 @@
 }
 
 .sectionWorks .column:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   transition: transform 0.3s;
 }
 
@@ -66,9 +72,9 @@
 .sectionWorks .column::after {
   background: linear-gradient(
     235deg,
-    /* rgba(61, 255, 54, 0.7), */ rgba(235, 62, 91, 0.7),
+    rgb(24, 24, 24),
     rgb(54, 54, 54),
-    rgba(235, 62, 91, 0.7)
+    rgb(24, 24, 24)
   );
 }
 
@@ -99,6 +105,13 @@
   align-self: flex-end;
   border-radius: 18px;
   padding: 9px;
+  transition: all 0.2s linear;
+}
+
+.sectionWorks .column .content a.btn:hover {
+  color: black;
+  background-color: rgb(219, 219, 219);
+  border: 1px solid rgb(61, 61, 61);
 }
 
 /* select skills */
@@ -107,7 +120,17 @@
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 2rem 0;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+}
+@media (min-width: 360px) {
+  .selectSkills {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 410px) {
+  .selectSkills {
+    font-size: 0.9rem;
+  }
 }
 
 .selectSkills .selectSkill:hover {
@@ -189,17 +212,34 @@
 
 /* section profile */
 .sectionProfile {
+  width: 100vw;
 }
 
 .sectionProfile .row:nth-child(1) {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
 }
 
 .sectionProfile .row:nth-child(2) {
-  height: 50vh;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: rgba(175, 175, 175, 0.178);
+  display: flex;
+  overflow-x: scroll;
+  /* justify-content: space-around; */
 }
+
+.sectionProfile .row:nth-child(2) .col {
+  background-color: rgb(54, 54, 54);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin: 0 1rem;
+  min-width: 300px;
+  box-shadow: 6px 6px 2px 1px rgba(173, 173, 173, 0.144);
+}
+
+/* .sectionProfile .row:not(:nth-child(1)) {
+  height: 50vh;
+} */
 
 @media (min-width: 800px) {
 }

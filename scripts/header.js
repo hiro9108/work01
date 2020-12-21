@@ -70,3 +70,19 @@ slider03.addEventListener("click", () => {
   changeBackgroundImg("sliderImg03");
   focusSliderColor(slider03);
 });
+
+// Auto play mode
+setInterval(() => {
+  if (header.classList.contains("sliderImg01")) {
+    changeBackgroundImg("sliderImg02");
+    focusSliderColor(slider02);
+  } else if (header.classList.contains("sliderImg02")) {
+    changeBackgroundImg("sliderImg03");
+    focusSliderColor(slider03);
+  } else if (header.classList.contains("sliderImg03")) {
+    changeBackgroundImg("sliderImg01");
+    focusSliderColor(slider01);
+  } else {
+    console.log("Doesn't work sliders");
+  }
+}, 8000);

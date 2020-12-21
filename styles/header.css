@@ -8,14 +8,17 @@
 
 .sliderImg01 {
   background-image: url(https://cdn.pixabay.com/photo/2019/12/11/01/51/skating-4687221__480.png);
+  transition: all 0.05s linear;
 }
 
 .sliderImg02 {
   background-image: url(https://cdn.pixabay.com/photo/2020/11/02/13/15/reindeer-5706627__480.png);
+  transition: all 0.05s linear;
 }
 
 .sliderImg03 {
   background-image: url(https://cdn.pixabay.com/photo/2020/11/24/18/19/cat-5773481__480.jpg);
+  transition: all 0.05s linear;
 }
 
 .header .sliders {
@@ -40,7 +43,8 @@
 }
 
 .header .sliders .sliderFocus {
-  background-color: green;
+  background-color: rgb(126, 126, 126);
+  transform: scale(0.8);
 }
 
 .header .backScreen {
@@ -56,35 +60,53 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100vw;
+  /* height: 5rem; */
   padding: 0 5vw;
-  background-color: black;
+  color: black;
+  background-color: white;
   position: fixed;
   z-index: 2;
 }
 
 .header .nav .logo {
-  /* background-color: red; */
 }
 
 .header .nav .logo .logoText {
-  /* background-color: red; */
+  color: black;
+  font-size: 2rem;
 }
 
 .header .nav .menu {
-  /* display: none; */
+  /* font-size: 1.5rem; */
 }
 
 .header .nav .item {
   margin: 0.3rem 0;
+  font-size: 1.5rem;
+  color: black;
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   text-transform: uppercase;
 }
 
-.header .nav .menuIcon {
+.header .nav .item a {
+  color: black;
 }
 
+.header .nav .menuIcon,
 .header .nav .closeIcon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header .nav .menuIcon i,
+.header .nav .closeIcon i {
+  transition: all 0.2s linear;
+}
+
+.header .nav .menuIcon i:hover,
+.header .nav .closeIcon i:hover {
+  transform: scale(1.1) translateY(-2px);
 }
 
 @media (min-width: 800px) {

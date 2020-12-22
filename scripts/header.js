@@ -30,6 +30,13 @@ backScreen.addEventListener("click", () => {
 });
 
 /*
+  Header title section
+*/
+const headerTitle01 = document.getElementById("headerTitle01");
+const headerTitle02 = document.getElementById("headerTitle02");
+const headerTitle03 = document.getElementById("headerTitle03");
+
+/*
   Slider section
 */
 const header = document.getElementById("header");
@@ -59,16 +66,31 @@ const focusSliderColor = (targetSlider) => {
 slider01.addEventListener("click", () => {
   changeBackgroundImg("sliderImg01");
   focusSliderColor(slider01);
+
+  // Todo create function for headerTitle
+  headerTitle01.classList.replace("close", "open");
+  headerTitle02.classList.replace("open", "close");
+  headerTitle03.classList.replace("open", "close");
 });
 
 slider02.addEventListener("click", () => {
   changeBackgroundImg("sliderImg02");
   focusSliderColor(slider02);
+
+  // Todo create function for headerTitle
+  headerTitle01.classList.replace("open", "close");
+  headerTitle02.classList.replace("close", "open");
+  headerTitle03.classList.replace("open", "close");
 });
 
 slider03.addEventListener("click", () => {
   changeBackgroundImg("sliderImg03");
   focusSliderColor(slider03);
+
+  // Todo create function for headerTitle
+  headerTitle01.classList.replace("open", "close");
+  headerTitle02.classList.replace("open", "close");
+  headerTitle03.classList.replace("close", "open");
 });
 
 // Auto play mode
@@ -76,12 +98,27 @@ setInterval(() => {
   if (header.classList.contains("sliderImg01")) {
     changeBackgroundImg("sliderImg02");
     focusSliderColor(slider02);
+
+    // Todo create function for headerTitle
+    headerTitle01.classList.replace("open", "close");
+    headerTitle02.classList.replace("close", "open");
+    headerTitle03.classList.replace("open", "close");
   } else if (header.classList.contains("sliderImg02")) {
     changeBackgroundImg("sliderImg03");
     focusSliderColor(slider03);
+
+    // Todo create function for headerTitle
+    headerTitle01.classList.replace("open", "close");
+    headerTitle02.classList.replace("open", "close");
+    headerTitle03.classList.replace("close", "open");
   } else if (header.classList.contains("sliderImg03")) {
     changeBackgroundImg("sliderImg01");
     focusSliderColor(slider01);
+
+    // Todo create function for headerTitle
+    headerTitle01.classList.replace("close", "open");
+    headerTitle02.classList.replace("open", "close");
+    headerTitle03.classList.replace("open", "close");
   } else {
     console.log("Doesn't work sliders");
   }

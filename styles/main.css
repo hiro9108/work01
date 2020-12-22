@@ -136,13 +136,13 @@
 .selectSkills .selectSkill:hover {
   cursor: pointer;
   transform: translateY(-2px);
-  border-bottom: 1px solid rgba(255, 0, 0, 0.781);
+  border-bottom: 1px solid rgba(248, 131, 131, 0.781);
   transition: all 0.2s linear;
 }
 
 .focus {
-  color: rgba(255, 0, 0, 0.781);
-  border-bottom: 1px solid rgba(255, 0, 0, 0.781);
+  color: rgb(240, 74, 74);
+  border-bottom: 1px solid rgba(248, 131, 131, 0.781);
 }
 
 /* section skills */

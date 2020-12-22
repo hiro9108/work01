@@ -6,6 +6,17 @@
   background-position: center;
 }
 
+.header .headerTitle {
+  color: white;
+  margin: auto 0;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2.5rem;
+  transform: translateX(-50%);
+}
+
 .sliderImg01 {
   background-image: url(https://cdn.pixabay.com/photo/2019/12/11/01/51/skating-4687221__480.png);
   transition: all 0.05s linear;
